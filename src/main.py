@@ -21,7 +21,7 @@ port=1883
 #hostname
 broker="localhost" 
 #time to live
-timelive=60000
+timelive=60
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))#st.text("Connected with result code "+str(rc))
     client.subscribe([("/data",1),("/data1",1)])
@@ -61,7 +61,7 @@ st.title("Streamlit teste")
 client.publish("/data1","true")
 client.publish("/data2","true")
 
-client.loop_forever()
+#client.loop_forever()
 
 # client.loop_start()
 # btn1 = st.button('Device 1')
@@ -70,9 +70,8 @@ client.loop_forever()
 # 	btn1=False
 
 
-# thread_client = threading.Thread(target=client.loop_forever)
-# add_report_ctx(thread_client)
-# thread_client.start()
+thread_client = threading.Thread(target=client.loop_forever)
+thread_client.start()
 
 
 
