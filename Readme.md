@@ -26,7 +26,7 @@ sudo docker run -d -p 27017:27017 -p 28017:28017 -e MONGODB_PASS="mypass" tutum/
 ```
 O próximo passo será subir o seu servidor mongo. Para isso, execute os passos abaixo:
 
-*** CASO JA TENHA A IMAGEM BASTA LISTAR AS IMAGENS COM O COMANDO ABAIXO E DAR UM docker start 'CONTAINER ID'***
+***CASO JA TENHA A IMAGEM BASTA LISTAR AS IMAGENS COM O COMANDO ABAIXO E DAR UM docker start 'CONTAINER ID'***
 ```
 sudo docker ps -a
 ```
@@ -37,7 +37,7 @@ sudo docker start 77b903780b83
 
 Agora para verificar se tudo foi configurado corretamente, execute ***mongo*** no seu terminal para acessar o client do seu servidor.
 
-*** PARA EXECUTAR O COMANDO mongo DEVE INSTALAR O PACOTE ***
+***PARA EXECUTAR O COMANDO mongo DEVE INSTALAR O PACOTE***
 ```
 sudo apt-get install -y mongodb-org-shell
 ```
@@ -61,6 +61,6 @@ python3 pub_client_2.py
 ## Simular a parametrização e a coleta das assinaturas de impedância dos sensores
 
 
-Abra [localhost:8501/?name=main](http://localhost:8501/?name=main) no navegador. 
+Abra ![localhost:8501/?name=main](http://localhost:8501/?name=main) no navegador. 
 
 
