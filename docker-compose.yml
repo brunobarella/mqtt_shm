@@ -1,0 +1,19 @@
+version: "3"
+services:
+  mqtt:
+    image: toke/mosquitto
+    network_mode: bridge
+    container_name: mqtt
+    expose:
+    - 1883
+    ports:
+    - 1883:1883
+    restart: unless-stopped
+  streamlit:
+    network_mode: host
+    build: .
+    command: "streamlit run src/main.py"
+    ports:
+      - "8501:8501"
+    volumes:
+      - "./src:/usr/src/app/src"
