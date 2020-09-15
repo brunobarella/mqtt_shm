@@ -55,12 +55,13 @@ Abra dois terminais e execute os scripts pub_client_1.py e pub_client_2.py:
 ```
 python3 pub_client_1.py
 ```
+```
 python3 pub_client_2.py
 ```
 
 ## Simular a parametrização e a coleta das assinaturas de impedância dos sensores
 
 
-Abra [a link](http://localhost:8501/?name=main) no navegador. 
+Abra [localhost:8501/?name=main](http://localhost:8501/?name=main) no navegador. 
 
 
