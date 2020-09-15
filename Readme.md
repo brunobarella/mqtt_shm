@@ -61,6 +61,6 @@ python3 pub_client_2.py
 ## Simular a parametrização e a coleta das assinaturas de impedância dos sensores
 
 
-Abra ![localhost:8501/?name=main](http://localhost:8501/?name=main) no navegador. 
+Abra [a link](http://localhost:8501/?name=main) no navegador. 
 
 
