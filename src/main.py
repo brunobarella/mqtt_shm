@@ -61,7 +61,7 @@ st.title("Streamlit teste")
 client.publish("/data1","true")
 client.publish("/data2","true")
 
-#client.loop_forever()
+client.loop_forever()
 
 # client.loop_start()
 # btn1 = st.button('Device 1')
@@ -70,8 +70,8 @@ client.publish("/data2","true")
 # 	btn1=False
 
 
-thread_client = threading.Thread(target=client.loop_forever)
-thread_client.start()
+# thread_client = threading.Thread(target=client.loop_forever)
+# thread_client.start()
 
 
 

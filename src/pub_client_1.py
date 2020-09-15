@@ -21,7 +21,7 @@ def on_message(client, userdata, msg):
 	msg_received = msg.payload.decode()
 	print(msg_received)
 	if msg_received=='true':
-		for i in range(20):
+		for i in range(10):
  			d=random.randint(1,5)
  	    
  			#telemetry to send 
