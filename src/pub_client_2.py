@@ -33,7 +33,7 @@ def on_message(client, userdata, msg):
  			ret = client.publish("/data2",message)
 
 		
-        
+   
 # Create a new client for receiving messages
 client = mqtt.Client('Device2')
 client.on_connect = on_connect

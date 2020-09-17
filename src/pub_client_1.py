@@ -32,8 +32,6 @@ def on_message(client, userdata, msg):
 			print(message)
 			ret = client.publish("/data1",message)
 
-
-		
         
 # Create a new client for receiving messages
 client = mqtt.Client('Device1')
