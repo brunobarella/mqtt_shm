@@ -9,10 +9,20 @@ services:
     ports:
     - 1883:1883
     restart: unless-stopped
+  subscriber:
+    network_mode: host
+    build: .
+    command: "python3 src/main.py"
+    #command: "streamlit run src/streamlit_sistema.py"
+    ports:
+      - "8501:8501"
+    volumes:
+      - "./src:/usr/src/app/src"
   streamlit:
     network_mode: host
     build: .
-    command: "streamlit run src/main.py"
+    command:  "streamlit run src/streamlit_sistema.py"
+    #command: "streamlit run src/streamlit_sistema.py"
     ports:
       - "8501:8501"
     volumes:

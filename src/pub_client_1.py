@@ -22,15 +22,16 @@ def on_message(client, userdata, msg):
 	print(msg_received)
 	if msg_received=='true':
 		for i in range(10):
- 			d=random.randint(1,5)
- 	    
- 			#telemetry to send 
- 			message="1:Data" + str(i)
- 			time.sleep(d)
- 	    		
- 			#publish message
- 			print(message)
- 			ret = client.publish("/data1",message)
+			d=random.randint(1,5)
+			
+			#telemetry to send 
+			message="1:" + str(i*d)
+			time.sleep(d)
+			
+			#publish message
+			print(message)
+			ret = client.publish("/data1",message)
+
 
 		
         
@@ -40,20 +41,7 @@ client.on_connect = on_connect
 client.on_message = on_message
 client.connect(broker,port,timelive)
 client.loop_forever()
-#client.loop_start()
-# # if True:#msg_received=='true':
-# # 	for i in range(20):
-# # 		d=random.randint(1,5)
-    
-# # 		#telemetry to send 
-# # 		message="1:Data" + str(i)
-# # 		time.sleep(d)
-    		
-# # 		#publish message
-# # 		print(message)
-# # 		ret = client.publish("/data1",message)
 
-# client.loop_stop()
 print("Stopped...")
 
 
